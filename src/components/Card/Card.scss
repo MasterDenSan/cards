@@ -1,0 +1,50 @@
+.card {
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 15%;
+  height: 15%;
+  border-radius: 10px;
+  background-color: #AEF9C4;
+  transform: scale(1);
+  transform-style: preserve-3d;
+  transition: transform .3s;
+  position: relative;
+
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+
+  &__back {
+    backface-visibility: hidden;
+    width: 80%;
+    position: absolute;
+    pointer-events: none;
+  }
+
+  &__front {
+    backface-visibility: hidden;
+    width: 80%;
+    position: absolute;
+    transform: rotateY(180deg);
+    pointer-events: none;
+  }
+}
+
+.card:active {
+  transition: .3s;
+  transform: scale(0.95);
+}
+
+.card.roll {
+  transform: rotateY(180deg);
+}
+
+.card.stop {
+  pointer-events: none;
+}

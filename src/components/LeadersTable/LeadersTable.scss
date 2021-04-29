@@ -1,0 +1,29 @@
+.liader-table {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  margin: 20px auto;
+
+  &__title {
+    align-self: center;
+    font-size: 20px;
+    font-weight: 600;
+    margin: 15px 0;
+  }
+
+  &__item {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__name {
+    flex: 0 0 50%;
+    text-align: center;
+
+  }
+
+  &__time {
+    flex: 0 0 50%;
+    text-align: center;
+  }
+}
