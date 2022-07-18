@@ -1,7 +1,16 @@
-import React from "react";
+import {memo} from 'react'
 import './Card.scss'
 
-export default React.memo(function Card({card, isRoll, index, hanleRoll, order}) {
+
+interface ICard {
+    card: string
+    isRoll: boolean
+    index: number
+    hanleRoll: (index: number) => void
+    order: number
+}
+
+export default memo(function Card({card, isRoll, index, hanleRoll, order}: ICard): JSX.Element  {
 
     return (
         <div className={isRoll ? "card roll" : "card"} onClick={() => hanleRoll(index)} style={{order: order + index}}>

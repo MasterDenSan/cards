@@ -55,7 +55,7 @@ module.exports = {
         path: path.resolve(__dirname, 'dist')
     },
     resolve: {
-        extensions: ['.js', '.jsx']
+        extensions: ['.js', '.jsx', '.ts', '.tsx']
     },
     optimization: optimization(),
     devServer: {
@@ -113,6 +113,10 @@ module.exports = {
                     loader: "babel-loader",
                     options: babelOptions('@babel/preset-react')
                 }
+            },
+            {
+                test: /\.tsx?$/,
+                use: ["ts-loader"]
             }
         ]
     }
