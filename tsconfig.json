@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+    "jsx": "react-jsx"
+  },
+  "include": [
+    "./src/*",
+    "./src/**/*",
+    "webpack.config.js"
+  ]
+}
