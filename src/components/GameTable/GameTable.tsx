@@ -1,9 +1,21 @@
-import React, {useEffect, useState} from "react";
+import {FC, memo, useEffect, useState} from "react";
 import Card from "../Card/Card";
 import './GameTable.scss'
 import getRandom from "../Rendomizer/randomizer";
 
-const GameTable = React.memo(({cards, onEndGame, onAddLeaderActionCreator}) => {
+interface ICards {
+    id: number
+    name: string
+}
+
+interface IGameTable {
+    cards: ICards[]
+    onEndGame: () => void
+    onAddLeaderActionCreator: (name: string) => void
+}
+
+
+const GameTable: FC<IGameTable> = ({cards, onEndGame, onAddLeaderActionCreator}) => {
 
     const cardClone = JSON.parse(JSON.stringify(cards));
     const gameCards = [...cards, ...cardClone];
@@ -78,6 +90,6 @@ const GameTable = React.memo(({cards, onEndGame, onAddLeaderActionCreator}) => {
             </div>
         </div>
     )
-})
+}
 
-export default GameTable;
+export default memo(GameTable);
