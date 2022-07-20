@@ -1,7 +1,7 @@
 import {FC, memo, useEffect, useState} from "react";
 import Card from "../Card/Card";
 import './GameTable.scss'
-import getRandom from "../Rendomizer/randomizer";
+import getRandom from "../../Utils/Rendomizer/randomizer";
 
 interface ICards {
     id: number
@@ -12,10 +12,11 @@ interface IGameTable {
     cards: ICards[]
     onEndGame: () => void
     onAddLeaderActionCreator: (name: string) => void
+    className?: string
 }
 
 
-const GameTable: FC<IGameTable> = ({cards, onEndGame, onAddLeaderActionCreator}) => {
+const GameTable: FC<IGameTable> = ({cards, onEndGame, onAddLeaderActionCreator, ...otherProps}) => {
 
     const cardClone = JSON.parse(JSON.stringify(cards));
     const gameCards = [...cards, ...cardClone];

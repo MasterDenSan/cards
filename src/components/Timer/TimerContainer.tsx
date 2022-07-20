@@ -1,10 +1,10 @@
-import React, {useCallback} from "react";
+import {memo, useCallback} from "react";
 import Timer from "./Timer";
 import {useDispatch} from "react-redux";
 import {setGameTime} from "../../store/actions/cardGameActions";
 import "./TimerContainer.scss"
 
-export default React.memo(function UserInfo() {
+ const UserInfo = () => {
     const dispatch = useDispatch()
     const onSetGameTime = useCallback((time) => {
         dispatch(setGameTime(time))
@@ -15,4 +15,6 @@ export default React.memo(function UserInfo() {
             <Timer onSetGameTime={onSetGameTime}/>
         </div>
     )
-})
+}
+
+export default memo(UserInfo)
