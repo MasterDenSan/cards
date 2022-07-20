@@ -1,5 +1,5 @@
-import {combineReducers, createStore} from "redux";
-import cardsGameReduser from "./reducers/cardsGameReduser";
+import { combineReducers, createStore } from "redux"
+import cardsGameReduser from "./reducers/cardsGameReduser"
 
 
 let reducers = combineReducers({
@@ -8,6 +8,6 @@ let reducers = combineReducers({
 
 const store = createStore(reducers)
 
-window.__store__ = store;
+window.__store__ = store
 
-export default store;
+export default store

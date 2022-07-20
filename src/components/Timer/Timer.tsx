@@ -1,6 +1,10 @@
-import React, {useCallback, useEffect, useState} from "react";
+import {FC, memo, useCallback, useEffect, useState} from "react";
 
-export default React.memo(function Timer({onSetGameTime}) {
+interface ITimer {
+    onSetGameTime: (time: string) => void
+}
+
+const Timer: FC<ITimer> = ({onSetGameTime}) => {
     let secondStep = 0;
     let timer;
 
@@ -34,4 +38,6 @@ export default React.memo(function Timer({onSetGameTime}) {
             </div>
         </div>
     )
-})
+}
+
+export default memo(Timer)
