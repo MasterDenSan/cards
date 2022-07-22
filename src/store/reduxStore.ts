@@ -8,6 +8,6 @@ let reducers = combineReducers({
 
 const store = createStore(reducers)
 
-window.__store__ = store
+window['__store__'] = store.getState()
 
 export default store
