@@ -1,8 +1,5 @@
 import {FC, memo, useCallback, useEffect, useState} from "react";
-
-interface ITimer {
-    onSetGameTime: (time: string) => void
-}
+import {ITimer} from "./types";
 
 const Timer: FC<ITimer> = ({onSetGameTime}) => {
     let secondStep = 0;

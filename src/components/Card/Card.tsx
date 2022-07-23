@@ -1,14 +1,6 @@
 import {FC, memo} from 'react'
 import './Card.scss'
-
-
-interface ICard {
-    card: string
-    isRoll: boolean
-    index: number
-    hanleRoll: (index: number) => void
-    order: number
-}
+import {ICard} from "./types";
 
 const Card: FC<ICard> = ({card, isRoll, index, hanleRoll, order, ...otherProps} ): JSX.Element => {
     return (

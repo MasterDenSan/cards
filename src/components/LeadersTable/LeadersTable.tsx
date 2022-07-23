@@ -1,15 +1,6 @@
 import "./LeadersTable.scss"
 import {FC} from "react"
-
-interface ILeader {
-    id: number
-    name: string
-    time: string
-}
-interface ILeadersTable {
-    leaders: ILeader[]
-}
-
+import {ILeadersTable} from "./types";
 
 const LeadersTable: FC<ILeadersTable> = ({leaders}) => {
 

@@ -1,20 +1,8 @@
-import {FC, memo, useEffect, useState} from "react";
-import Card from "../Card/Card";
+import {FC, memo, useEffect, useState} from 'react';
+import Card from '../Card'
 import './GameTable.scss'
-import getRandom from "../../Utils/Rendomizer/randomizer";
-
-interface ICards {
-    id: number
-    name: string
-}
-
-interface IGameTable {
-    cards: ICards[]
-    onEndGame: () => void
-    onAddLeaderActionCreator: (name: string) => void
-    className?: string
-}
-
+import getRandom from '../../Utils/Rendomizer/randomizer'
+import {IGameTable} from "./types";
 
 const GameTable: FC<IGameTable> = ({cards, onEndGame, onAddLeaderActionCreator, ...otherProps}) => {
 

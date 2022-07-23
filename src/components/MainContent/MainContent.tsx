@@ -1,14 +1,14 @@
 import {FC, useCallback} from "react";
-import GameTable from "../GameTable/GameTable";
-import {RootStateOrAny, useDispatch, useSelector} from "react-redux";
+import {RootStateOrAny, useDispatch, useSelector} from "react-redux"
 import {
     addLeaderActionCreator,
     endGameActionCreator,
     startGameActionCreator
-} from "../../store/actions/cardGameActions";
-import LeadersTable from "../LeadersTable/LeadersTable";
+} from "../../store/actions/cardGameActions"
 import "./MainContent.scss"
-import TimerContainer from "../Timer/TimerContainer";
+import GameTable from "../GameTable"
+import LeadersTable from '../LeadersTable'
+import TimerContainer from "../Timer";
 
 
 const MainContent: FC = () => {
