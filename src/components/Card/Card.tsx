@@ -3,6 +3,10 @@ import './Card.scss'
 import {ICard} from "./types";
 
 const Card: FC<ICard> = ({card, isRoll, index, hanleRoll, order, ...otherProps} ): JSX.Element => {
+
+
+
+
     return (
         <div className={isRoll ? "card roll" : "card"} onClick={() => hanleRoll(index)} style={{order: order + index}} {...otherProps}>
             <img className="card__front" src={`./images/${card}.svg`} alt=""/>
