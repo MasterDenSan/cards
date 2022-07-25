@@ -1,1 +1,1 @@
-export interface IMainContent {}
+// export interface IMainContent {}

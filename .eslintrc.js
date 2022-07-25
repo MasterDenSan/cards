@@ -1,43 +1,47 @@
 module.exports = {
-	'env': {
+	env: {
 		'browser': true,
-		'es2021': true
+		'node': true,
+		'es2021': true,
 	},
-	'extends': [
-		'eslint:recommended',
+	extends: [
 		'plugin:react/recommended',
+		'eslint:recommended',
 		'plugin:@typescript-eslint/recommended',
-		"airbnb"
+		'plugin:import/recommended',
+		'plugin:import/typescript',
 	],
-	'parser': '@typescript-eslint/parser',
-	'parserOptions': {
+	parser: '@typescript-eslint/parser',
+	parserOptions: {
 		'ecmaFeatures': {
-			'jsx': true
+			'jsx': true,
 		},
 		'ecmaVersion': 'latest',
-		'sourceType': 'module'
+		'sourceType': 'module',
 	},
-	'plugins': [
+	plugins: [
 		'react',
-		'@typescript-eslint'
+		'@typescript-eslint',
 	],
-	'rules': {
-		"no-unused-vars": 1,
-		'indent': [
-			'error',
-			'tab'
-		],
-		'linebreak-style': [
-			'error',
-			'windows'
-		],
-		'quotes': [
-			'error',
-			'single'
-		],
-		'semi': [
-			'error',
-			'never'
-		]
-	}
-}
+	rules: {
+        'no-unused-vars': 'warn',
+		'no-console': 'warn',
+		semi: ['warn', 'always'],
+		'quotes': ['error', 'single'],
+		'jsx-quotes': ['error', 'prefer-single'],
+		'prefer-const': 'error',
+		'comma-dangle': ['error', 'always-multiline'],
+		'import/order': ['error', {
+			'groups': ['builtin', 'external', 'internal', 'parent',
+				'sibling', 'index', 'object', 'type'],
+		}],
+
+		'react/react-in-jsx-scope': 'off',
+		'@typescript-eslint/no-var-requires': 0,
+	},
+	settings: {
+		'react': {
+			'version': '999.999.999',
+		},
+	},
+};

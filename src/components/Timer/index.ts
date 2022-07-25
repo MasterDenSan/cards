@@ -1,2 +1,2 @@
-export { default } from './TimerContainer'
-export type { ITimer } from './types'
+export { default } from './TimerContainer';
+export type { ITimer } from './types';
