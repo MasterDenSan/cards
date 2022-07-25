@@ -1,2 +1,2 @@
-export { default } from './MainContent'
-export type { IMainContent } from './types'
+export { default } from './MainContent';
+export type { IMainContent } from './types';

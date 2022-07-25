@@ -1,2 +1,2 @@
-export { default } from './Card'
-export type { ICard } from './types'
+export { default } from './Card';
+export type { ICard } from './types';
