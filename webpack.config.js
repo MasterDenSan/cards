@@ -65,6 +65,7 @@ module.exports = {
     },
     devtool: isDev ? 'eval-source-map' : false,
     plugins: [
+        new ESLintPlugin({ extensions: ['js', 'jsx', 'ts', 'tsx'] }),
         new HTMLWebpackPlugin({
             template: '../public/index.html'
         }),
@@ -84,7 +85,6 @@ module.exports = {
         new MiniCssExtractPlugin({
             filename: filename('css')
         }),
-        new ESLintPlugin({ extensions: ['js', 'jsx', 'ts', 'tsx'] })
     ],
     module: {
         rules: [

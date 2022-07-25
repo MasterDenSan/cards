@@ -6,7 +6,8 @@ module.exports = {
 	'extends': [
 		'eslint:recommended',
 		'plugin:react/recommended',
-		'plugin:@typescript-eslint/recommended'
+		'plugin:@typescript-eslint/recommended',
+		"airbnb"
 	],
 	'parser': '@typescript-eslint/parser',
 	'parserOptions': {
@@ -21,6 +22,7 @@ module.exports = {
 		'@typescript-eslint'
 	],
 	'rules': {
+		"no-unused-vars": 1,
 		'indent': [
 			'error',
 			'tab'
