@@ -25,7 +25,7 @@ module.exports = {
 	],
 	rules: {
         'no-unused-vars': 'warn',
-		'no-console': 'warn',
+		'no-console': 'error',
 		semi: ['warn', 'always'],
 		'quotes': ['error', 'single'],
 		'jsx-quotes': ['error', 'prefer-single'],
