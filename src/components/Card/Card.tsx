@@ -3,8 +3,6 @@ import {FC, memo} from 'react';
 import {ICard} from './types';
 
 const Card: FC<ICard> = ({card, isRoll, index, hanleRoll, order, ...otherProps} ): JSX.Element => {
-    console.log('fffff')
-    console.log("fffff")
     return (
         <div
             className={isRoll ? 'card roll' : 'card'}
