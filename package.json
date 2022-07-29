@@ -8,8 +8,9 @@
     "build": "webpack --mode production",
     "watch": "webpack --mode development --watch",
     "start": "webpack serve --mode development",
-    "lint": "eslint -c .eslintrc --ext .js,.jsx,.ts,.tsx .",
-    "lint:fix": "npm run lint -- --fix"
+    "lint": "eslint -c .eslintrc.js --ext .js,.jsx,.ts,.tsx . --color",
+    "lint:fix": "npm run lint -- --fix --color",
+    "prepare": "husky install"
   },
   "browserslist": "> 0.25%, not dead",
   "author": "den",
@@ -43,7 +44,8 @@
     "ts-loader": "^9.3.1",
     "webpack": "^5.33.2",
     "webpack-cli": "^4.6.0",
-    "webpack-dev-server": "^3.11.2"
+    "webpack-dev-server": "^3.11.2",
+    "husky": "^8.0.0"
   },
   "dependencies": {
     "@babel/polyfill": "^7.12.1",
